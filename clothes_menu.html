@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shopping menu</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+         <link href="startbootstrap-business-frontpage-gh-pages/css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="clothes_menu.css">
+
+  <script src="jquery-3.6.0.js"></script>
+	</head>
+
+<body>
+
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark2">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">Contact</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+<div class="naslov">
+		<h1 id="ime_proiz">Cloth</h1>
+	</div>
+
+
+<div class="proizvodi">
+	<div class="image" id="div1">
+			<a href="#">
+			<img src="#" id="prva" class="prod_image" alt="proizvodi" onclick="openModal();currentSlide(0)">
+			 <div class="text_ispod">
+      <p id="text1" class="text_slike">Gorski kristal 3100</p>
+    </div></a>
+	
+    </div>
+
+    <div class="image" id="div2">
+			<a href="#">
+			<img src="#" id="druga" class="prod_image" alt="proizvodi" onclick="openModal();currentSlide(1)">
+			 <div class="text_ispod">
+      <p id="text2" class="text_slike">Labradorit-Ave. 3500</p>
+    </div></a>
+	
+    </div>
+
+    <div class="image" id="div3">
+			<a href="#">
+			<img src="#" id="treca" class="prod_image" alt="proizvodi" onclick="openModal();currentSlide(2)">
+			 <div class="text_ispod">
+      <p id="text3" class="text_slike">Ogrlice 1500 - 3100</p>
+    </div></a>
+	
+    </div>
+
+    <div class="image" id="div4">
+			<a href="#">
+			<img src="#" id="cetvrta" class="prod_image" alt="proizvodi" onclick="openModal();currentSlide(3)" >
+			 <div class="text_ispod">
+      <p id="text4" class="text_slike">Ogrlice 1500 - 3100</p>
+    </div></a>
+	
+    </div>
+
+     <div class="image" id="div5">
+			<a href="#">
+			<img src="#" id="peta" class="prod_image" alt="proizvodi"  onclick="openModal();currentSlide(4)">
+			 <div class="text_ispod">
+      <p id="text5" class="text_slike">Tirkiz-Ametist 2500</p>
+    </div></a>
+	
+    </div>
+
+     <div class="image" id="div6">
+			<a href="#">
+			<img src= "#" id="sesta" class="prod_image" alt="proizvodi" onclick="openModal();currentSlide(5)">
+			 <div class="text_ispod">
+      <p id="text6" class="text_slike">Roze kvarc-Koral 2500</p>
+    </div></a>
+	
+    </div>
+
+     <div class="image" id="div7">
+			<a href="#">
+			<img src="#" id="sedma" class="prod_image" alt="proizvodi" onclick="openModal();currentSlide(6)">
+			 <div class="text_ispod">
+      <p id="text7" class="text_slike">Rodohrozit-Roze kv</p>
+    </div></a>
+	
+    </div>
+
+     <div class="image" id="div8">
+			<a href="#">
+			<img src="#" id="osma" class="prod_image" alt="proizvodi" onclick="openModal();currentSlide(7)">
+			 <div class="text_ispod">
+      <p id="text8" class="text_slike">Opsidijan-Roze kvarc</p>
+    </div></a>
+	
+    </div>
+
+</div>
+
+<!--
+<div class="buttons">
+	<button onclick="newPicture(this)" role="button" id="prev" class="button round">&#8249;</button>
+	<p id="demo"><b>1</b> 2 3 4</p>
+	<button  onclick="newPicture(this)" role="button" id="next" class="button round">&#8250; </button>
+	</div>
+
+	<div class="back">
+<a href="#navbar" class="backtop"><small>Vrati se na početak</small></a>
+	</div> 
+
+<div id="myLightbox" class="lightbox">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="inner_light">
+
+  	 <div class="mySlides">
+      <p id="slide_text" class="slika_text">#</p>
+      <img id="imgSlide" src="#" >
+    </div>
+
+
+	<a class="prev" onclick="prevNextSlide(-1)">&#10094;</a>
+    <a class="next" onclick="prevNextSlide(1)">&#10095;</a>
+
+    <i id="exsp" class="fa fa-expand" aria-hidden="true" onclick="expand()"></i>
+
+</div>
+</div>
+
+
+
+	<footer>
+			<p class="footer_kontakt"><br>E-mail: kristalisilmarilion@gmail.com<br>
+			Instagram: <a class="insta" href="https://www.instagram.com/kristali_silmarilion/?hl=en">@kristali_silmarilion</a></p>
+			<p class="aut_prava">Zaštita autorskog prava 2022 © Kristali Silmarilion. Sva prava zadržana.</p>
+		</footer> -->
+        <!-- Footer-->
+        <footer class="py-5 bg-dark2">
+            <div class="container px-5"><p class="m-0 text-center text-white text-foo">Copyright &copy; Bambi Clothes 2023</p></div>
+        </footer>
+
+<!-- u script tagu src="nakitMenu.js" -->
+<script >
+
+</script>
+
+</body>
+
+</html>
