@@ -1,0 +1,17 @@
+.aboutme_div {
+  background: #e8e5d3;
+  padding: 0px 90px 55px;
+}
+.aboutme_div .about_me {
+  padding: 5px;
+  font-size: 17px;
+  color: #181b21;
+  line-height: 1.6;
+}
+.aboutme_div .about_heading {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: #181b21;
+}
+
+/*# sourceMappingURL=about.css.map */

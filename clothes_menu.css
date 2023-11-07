@@ -1,79 +1,93 @@
+/*nesting za proizvode, i za media queries*/
 * {
-	margin: 0;
-	padding: 0;
-}
-.naslov{
-	text-align: center;
-	min-height: 120px;
-	padding-top: 50px;
+  margin: 0;
+  padding: 0;
 }
 
+/* font-family: Verdana, sans-serif; 
 .naslov h1{
-	font-family: Verdana, sans-serif;
-	font-size: 40px;
+	*/
+.naslov {
+  text-align: center;
+  min-height: 120px;
+  padding-top: 50px;
+}
+.naslov h1 {
+  font-family: Verdana, sans-serif;
+  font-size: 40px;
 }
 
-.proizvodi{
-	font-family: Verdana, sans-serif;
+/* font-family: Verdana, sans-serif; 
 	margin: 10px auto 30px;
-	width: 90%;
-	padding: 10px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	text-align: center;
+		padding: 10px;
+*/
+.proizvodi {
+  font-family: Verdana, sans-serif;
+  margin: 10px auto 30px;
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 /*	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-.proizvodi .image{
-	position: relative;
-	margin: 15px;
-	box-sizing: border-box;
-	display: inline-block;
-	width: 22%;
-	 border-radius: 25px;
-	 border-style: solid;
-	 border-width: 1px;
-	 border-color: black;
+/*  .proizvodi .image{, .proizvodi a{
+ */
+.proizvodi .image {
+  position: relative;
+  margin: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 30%;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+.proizvodi a {
+  text-decoration: none;
+  color: black;
+}
+.proizvodi .text_ispod {
+  bottom: 0;
 }
 
-.proizvodi a{
-	text-decoration: none;
-	color: black;
-}
-.proizvodi .text_ispod{
-	bottom: 0;
-}
-.text_ispod p{
-	font-size: 17px;
-	text-align: center;
-	margin: 0;
-	padding: 10px 0;
-}
-.image img{
-
-	object-fit: contain;
-	background-color: #9D8AC7;
-}
-.prod_image{
-	max-width: 100%;
-	max-height: 90%;
+.text_ispod p {
+  font-size: 17px;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
 }
 
-.image img:hover{
-	opacity: 0.6;
+.image img {
+  object-fit: contain;
+  background-color: #9D8AC7;
 }
-.image:hover{
-	transform: scale(1.1);
-	transition-duration: 0.5s;
+
+.prod_image {
+  max-width: 100%;
+  max-height: 90%;
 }
+
+.image img:hover {
+  opacity: 0.6;
+}
+
+.image:hover {
+  transform: scale(1.08);
+  transition-duration: 0.5s;
+}
+
+/*
 .buttons{
 	display:inline-flex;
 	text-align: center;
 	justify-content: center;
 	align-items: center;        
 	align-content: center; 
-	
+
 	width: 100%;
 }
 .buttons a {
@@ -145,6 +159,7 @@ footer p a{
 	text-decoration: underline black;
 }
 /*kod za Lightbox*/
+/*
 .prev,
 .next {
 	cursor: pointer;
@@ -231,283 +246,255 @@ footer p a{
 	font-size: 20px;
 	font-weight: bold;
 }
-
+*/
 /*IE10+*/
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
-	.navbar{
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
+  .navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
-
 @media only screen and (min-width: 1440px) {
-	.naslov h1{
-		font-size: 80px;
-	}
-	.naslov p{
-		color: white;
-		font-size: 23px;
-	}
-	.uvod p{
-		font-size: 21px;
-	}
-	.uvod h3{
-		font-size: 29px;
-	}
-	.uvod hr{
-		width: 15%;
-		margin: auto;
-	}
-	.text_ispod p{
-		font-size: 20px;
-		padding: 20px 0;
-	}
-	footer p{
-		font-size: 19px;
-	}
-	.backtop{
-		font-size: 20px;
-	}
+  .naslov h1 {
+    font-size: 80px;
+  }
+  .naslov p {
+    color: white;
+    font-size: 23px;
+  }
+  .uvod p {
+    font-size: 21px;
+  }
+  .uvod h3 {
+    font-size: 29px;
+  }
+  .uvod hr {
+    width: 15%;
+    margin: auto;
+  }
+  .text_ispod p {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+  footer p {
+    font-size: 19px;
+  }
+  .backtop {
+    font-size: 20px;
+  }
 }
-
 @media only screen and (max-width: 1150px) {
-	.proizvodi{
-		width: 99%;
-		padding: 0 0 0 20px;
-	}
-	.proizvodi .image{
-		margin: 10px;
-		width: 30%;
-	}
-
-	.text_ispod p{
-		font-size: 17px;
-
-	}
+  .proizvodi {
+    width: 99%;
+    padding: 0 0 0 20px;
+  }
+  .proizvodi .image {
+    margin: 10px;
+    width: 46%;
+  }
+  .text_ispod p {
+    font-size: 17px;
+  }
 }
 @media only screen and (max-width: 1050px) {
-	.uvod p{
-		display: none;
-	}
-	.uvod hr{
-		width: 25%;
-	}
+  .uvod p {
+    display: none;
+  }
+  .uvod hr {
+    width: 25%;
+  }
 }
-
 @media only screen and (max-width: 780px) {
-	.image:hover{
-		transform: none;
-		transition-duration: 0s;
-	}
-	#exsp{
-		display: none;
-	}
-	.mySlides img{
-		padding-top: 150px;
-	}
+  .image:hover {
+    transform: none;
+    transition-duration: 0s;
+  }
+  #exsp {
+    display: none;
+  }
+  .mySlides img {
+    padding-top: 150px;
+  }
 }
-
 @media only screen and (max-width: 768px) {
-	.naslov{
-		min-height: 100px;
-	}
-	.naslov h1{
-		font-size: 37px;
-	}
-	.uvod p{
-		display: none;
-	}
-	.uvod hr{
-		width: 25%;
-	}
-	.proizvodi{
-		padding: 15px;
-	}
-
-	.proizvodi .image{
-		margin: 10px;
-		width: 46%;
-	}
-
-	.text_ispod p{
-		font-size: 15px;
-		padding: 5px 0;
-	}
-	.text{
-		padding-left: 40px;
-	}
-	.text ul li{
-		text-align: left;
-	}
-
-	.o_nama{
-		padding: 30px 20px;
-	}
-	footer p{
-		font-size: 15px;
-	}
+  .naslov {
+    min-height: 100px;
+  }
+  .naslov h1 {
+    font-size: 37px;
+  }
+  .uvod p {
+    display: none;
+  }
+  .uvod hr {
+    width: 25%;
+  }
+  .proizvodi {
+    padding: 15px;
+  }
+  /*.proizvodi .image{
+  	margin: 10px;
+  	width: 46%;
+  }*/
+  .text_ispod p {
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .text {
+    padding-left: 40px;
+  }
+  .text ul li {
+    text-align: left;
+  }
+  .o_nama {
+    padding: 30px 20px;
+  }
+  footer p {
+    font-size: 15px;
+  }
 }
-
 @media only screen and (max-width: 680px) {
-	.text ul li{
-		width: 140px;
-		font-size: 18px;
-	}
+  .text ul li {
+    width: 140px;
+    font-size: 18px;
+  }
 }
 @media only screen and (max-width: 570px) {
-	.naslov{
-		padding-top: 40px;
-	}
-	.naslov h1{
-		font-size: 35px;
-	}
-	.proizvodi .image{
-		margin: 5px;
-		width: 46%;
-	}
-
-	.text_ispod p{
-		font-size: 15px;
-		padding: 5px 0;
-	}
-	.text{
-		padding-left: 20px;
-	}
+  .naslov {
+    padding-top: 40px;
+  }
+  .naslov h1 {
+    font-size: 35px;
+  }
+  .proizvodi .image {
+    margin: 5px;
+    width: 46%;
+  }
+  .text_ispod p {
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .text {
+    padding-left: 20px;
+  }
 }
-
 @media only screen and (max-width: 520px) {
-	.text{
-		text-align: left;
-		padding: 7px 25px 0;
-	}
-
-	.text ul li{
-		display: block;
-		text-align: left;
-		font-size: 15px;
-	}
+  .text {
+    text-align: left;
+    padding: 7px 25px 0;
+  }
+  .text ul li {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+  }
 }
-
 @media only screen and (max-width: 488px) {
-	.uvod p{
-		display: none;
-	}
-	.uvod hr{
-		width: 35%;
-	}
-
-	.proizvodi .image{
-		margin: 5px;
-		width: 46%;
-	}
-
-	.text_ispod p{
-		font-size: 15px;
-		padding: 5px 0;
-	}
-	.onama_text{
-		text-align: center;
-		width: 100%;
-		float: top;
-		font-size: 16px;
-	}
-
-	footer p{
-		font-size: 15px;
-	}
-
+  .uvod p {
+    display: none;
+  }
+  .uvod hr {
+    width: 35%;
+  }
+  .proizvodi .image {
+    margin: 5px;
+    width: 46%;
+  }
+  .text_ispod p {
+    font-size: 15px;
+    padding: 5px 0;
+  }
+  .onama_text {
+    text-align: center;
+    width: 100%;
+    float: top;
+    font-size: 16px;
+  }
+  footer p {
+    font-size: 15px;
+  }
 }
 @media only screen and (max-width: 405px) {
-
-	.naslov{
-		min-height: 90px;
-		padding-top: 35px;
-	}
-
-	.proizvodi{
-		padding: 0 0 0 20px;
-	}
-	.proizvodi .image{
-		margin: 5px;
-		width: 90%;
-	}
+  .naslov {
+    min-height: 90px;
+    padding-top: 35px;
+  }
+  .proizvodi {
+    padding: 0 0 0 20px;
+  }
+  .proizvodi .image {
+    margin: 5px;
+    width: 90%;
+  }
 }
 @media only screen and (max-width: 360px) {
-	.naslov{
-		min-height: 90px;
-		padding-top: 30px;
-	}
-	.naslov h1{
-		font-size: 35px;
-	}
-	.uvod p{
-		display: none;
-	}
-	.uvod hr{
-		width: 40%;
-	}
-
-	.text_ispod p{
-		font-size: 14px;
-		padding: 5px 0;
-	}
-	.onama_text{
-		text-align: center;
-		width: 100%;
-		float: top;
-		font-size: 16px;
-	}
-
-	footer p{
-		font-size: 14px;
-	}
+  .naslov {
+    min-height: 90px;
+    padding-top: 30px;
+  }
+  .naslov h1 {
+    font-size: 35px;
+  }
+  .uvod p {
+    display: none;
+  }
+  .uvod hr {
+    width: 40%;
+  }
+  .text_ispod p {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  .onama_text {
+    text-align: center;
+    width: 100%;
+    float: top;
+    font-size: 16px;
+  }
+  footer p {
+    font-size: 14px;
+  }
 }
-
 @media only screen and (max-width: 320px) {
-	.naslov h1{
-		font-size: 33px;
-	}
-
-	.uvod h3{
-		font-size: 20px;
-	}
-	.uvod hr{
-		width: 47%;
-	}
-	.uvod p{
-		display: none;
-	}
-	.proizvodi{
-		padding: 0 0 0 10px;
-		width: 95%;
-	}
-
-	.proizvodi .image{
-		margin: 7px;
-		width: 90%;
-	}
-
-	.text_ispod p{
-		font-size: 14px;
-		padding: 5px 0;
-	}
-
-	.text{
-		padding: 7px 25px 0;
-	}
-	.text ul li{
-		font-size: 14px;
-	}
-	.backtop{
-		font-size: 16px;
-	}
-	footer p{
-		font-size: 14px;
-	}
-	.slika_text{
-
-		font-size: 15px;
-
-	}
+  .naslov h1 {
+    font-size: 33px;
+  }
+  .uvod h3 {
+    font-size: 20px;
+  }
+  .uvod hr {
+    width: 47%;
+  }
+  .uvod p {
+    display: none;
+  }
+  .proizvodi {
+    padding: 0 0 0 10px;
+    width: 95%;
+  }
+  .proizvodi .image {
+    margin: 7px;
+    width: 90%;
+  }
+  .text_ispod p {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  .text {
+    padding: 7px 25px 0;
+  }
+  .text ul li {
+    font-size: 14px;
+  }
+  .backtop {
+    font-size: 16px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  .slika_text {
+    font-size: 15px;
+  }
 }
+
+/*# sourceMappingURL=clothes_menu.css.map */
