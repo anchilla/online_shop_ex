@@ -1,2 +1,2 @@
 # online_shop_ex
-This project uses Bootstrap and Sass.
+Clothes shop, online shopping. This project uses Bootstrap, CSS and Sass for stylizing.
