@@ -1,3 +1,3 @@
 # online_shop_ex
 Clothes shop, online shopping. This project uses Bootstrap, CSS and Sass for stylizing.
-Also, it uses MongoDB to read the data.
+Also, it uses MongoDB to read the data and update it.
