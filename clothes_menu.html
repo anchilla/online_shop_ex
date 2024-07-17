@@ -158,6 +158,33 @@
 
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
+    //svi tems koji su na prodaju
+    let items = ["a", "b", "c", "d"];
+    let domElem = items.map(makeElem);
+
+    function makeElem(){
+       let divEl = document.createElement("div");
+       let emgEl = document.createElement("img");
+       let textEl = document.createElement("p")
+       //i onda ide appendChild vidi tu kako sta, mozda je bolje prvo ih napraviti 
+       // van ove metode, pa onda samo ih nalepis ovako
+    }
+//punjenje carta
+    let cart = [];
+    //add listener
+    //nova stranica koja pokazuje proizvod, tu dodaj add to cart dugme
+    //ima add to cart ikonica, na slici stoji, na ovoj strani ok
+    function addToCart(argument) {
+        //argument ce da bude index
+        /*mozes napraviti neku metodu koja prikazuje stvari, elemente na stranici
+        prema broju indexa u nizu, tj da puni id-jeve addtocart dugmeta na
+        svakom elementu, i tako su drugaciji. onda jedino sve sa js. jquery? hm*/
+        document.getElementById('') // ili event.target.id - moze ako stavim da
+        //su objekat iz niza i njegov id isti
+        let newItem = itmes[argument];
+        cart.push(newItem);
+    }
+    //delete metoda
 
 </script>
 
