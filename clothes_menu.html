@@ -6,14 +6,14 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Shopping menu</title>
-        <!-- Favicon-->
+        <!-- Favicon
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
+        Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
          <link href="startbootstrap-business-frontpage-gh-pages/css/styles.css" rel="stylesheet" />
-  <link rel="stylesheet" href="clothes_menu.css">
+ <link rel="stylesheet" href="clothes_menu.css"> 
 
-  <script src="jquery-3.6.0.js"></script>
+  <!-- <script src="jquery-3.6.0.js"></script> -->
 	</head>
 
 <body>
@@ -164,10 +164,11 @@
 
     function makeElem(){
        let divEl = document.createElement("div");
-       let emgEl = document.createElement("img");
+       let imgEl = document.createElement("img");
        let textEl = document.createElement("p")
        //i onda ide appendChild vidi tu kako sta, mozda je bolje prvo ih napraviti 
        // van ove metode, pa onda samo ih nalepis ovako
+       divEl.appendChild(imgEl);
     }
 //punjenje carta
     let cart = [];
