@@ -159,7 +159,7 @@
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
     //svi tems koji su na prodaju
-    let items = ["a", "b", "c", "d"];
+    let items = [{name:"a", id:1}, {name:"b", id:2}, "c", "d"];
     let domElem = items.map(makeElem);
 
     function makeElem(){
@@ -169,6 +169,10 @@
        //i onda ide appendChild vidi tu kako sta, mozda je bolje prvo ih napraviti 
        // van ove metode, pa onda samo ih nalepis ovako
        divEl.appendChild(imgEl);
+       //treba da na div stavis da su razliciti id- jevi
+       //da li da postavim da je id samo broj indexa u nizu?
+       //onda je index of item, ali mora dobija item u ovo metodi
+       divEl.id = items[];
     }
 //punjenje carta
     let cart = [];
