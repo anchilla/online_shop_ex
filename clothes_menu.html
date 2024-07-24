@@ -16,7 +16,7 @@
   <!-- <script src="jquery-3.6.0.js"></script> -->
 	</head>
 
-<body>
+<body onload="domElem">
 
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark2">
@@ -158,6 +158,8 @@
 
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
+
+
     //svi tems koji su na prodaju
     let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
         {name:"c", src:"long-hair.jpg"},{name: "d", src:"long-hair.jpg"}];
@@ -165,7 +167,7 @@
     //moram ih napunutu prvo da ih vidim na stranici, ili na windows, ili document
     // pozovem event ?
 
-//stavila objekte properti , na git
+
     function makeElem(item){
        let divEl = document.createElement("div");
        let imgEl = document.createElement("img");
@@ -181,6 +183,9 @@
        divEl.id = items.indexOf(item);
        console.log("item index: "+divEl.id);
     }
+    //items.addEventListener("load", domElem); 
+//window.addEventListener('load', items);
+
 //punjenje carta
     let cart = [];
     //add listener
