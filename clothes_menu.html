@@ -159,19 +159,35 @@
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
 
+//testovi za on load
+/*let el = document.createElement("div");
+       let imgEl = document.createElement("img");
+       //let textEl = document.createElement("p");
+       imgEl.src = "long-hair.jpg";
+       el.appendChild(imgEl); */
+    let elPostoji = document.getElementById("div1");
+    //i onda create img, append, pa vidi jel se pojavljuje
+          let imgEl = document.createElement("img");
+       imgEl.src = "long-hair.jpg";
+       elPostoji.appendChild(imgEl); 
 
-    //svi tems koji su na prodaju
+
+    //svi items koji su na prodaju
     let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
         {name:"c", src:"long-hair.jpg"},{name: "d", src:"long-hair.jpg"}];
     let domElem = items.map(makeElem);
     //moram ih napunutu prvo da ih vidim na stranici, ili na windows, ili document
     // pozovem event ?
 
+    //test, mozda je na vrhu strane pa ga ne vidis
+    let divEl = document.createElement("div");
+    const textnode = document.createTextNode("Water");
+    divEl.appendChild(textnode); //zalepi ovo u neki deo bootstrapa ili drugi html el
 
     function makeElem(item){
        let divEl = document.createElement("div");
        let imgEl = document.createElement("img");
-       let textEl = document.createElement("p")
+       let textEl = document.createElement("p");
        //i onda ide appendChild vidi tu kako sta, mozda je bolje prvo ih napraviti 
        // van ove metode, pa onda samo ih nalepis ovako
        imgEl.src = item.src;
@@ -184,7 +200,7 @@
        console.log("item index: "+divEl.id);
     }
     //items.addEventListener("load", domElem); 
-//window.addEventListener('load', items);
+window.addEventListener('load', items);
 
 //punjenje carta
     let cart = [];
