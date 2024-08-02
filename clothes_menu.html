@@ -160,18 +160,29 @@
 <script >
 
 //testovi za on load
-/*let el = document.createElement("div");
+    //aj prvo ovo
+    const btn = document.createElement("button");
+btn.innerHTML = "Hello Button";
+document.body.appendChild(btn);
+
+
+let el = document.createElement("div"); //mozda treba da ga zalepim na body ili tak n
        let imgEl = document.createElement("img");
-       //let textEl = document.createElement("p");
-       imgEl.src = "long-hair.jpg";
-       el.appendChild(imgEl); */
-    let elPostoji = document.getElementById("div1");
+       imgEl.src = "long-hair.jpg"; 
+       el.appendChild(imgEl); 
+       document.body.appendChild(el);
+
+/*ovo radi
+    let elPostoji = document.getElementById("div1");//mozda da ovde stavis for, da 
+    //ih tako puni, i onda while imsa njih, mapiraj items
     //i onda create img, append, pa vidi jel se pojavljuje
           let imgEl = document.createElement("img");
           imgEl.classList.add("prod_image");
        imgEl.src = "long-hair.jpg";
        elPostoji.appendChild(imgEl); 
+       */
 
+//mapiraj ovo gore u items, u p ide name, a img slika 
 
     //svi items koji su na prodaju
     let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
