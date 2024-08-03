@@ -159,20 +159,14 @@
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
 
-//testovi za on load
-    //aj prvo ovo
-    const btn = document.createElement("button");
-btn.innerHTML = "Hello Button";
-document.body.appendChild(btn);
-
-
-let el = document.createElement("div"); //mozda treba da ga zalepim na body ili tak n
+//radi jeeeej!
+let el = document.createElement("div"); //mozda treba da ga zalepim na body
        let imgEl = document.createElement("img");
        imgEl.src = "long-hair.jpg"; 
        el.appendChild(imgEl); 
        document.body.appendChild(el);
 
-/*ovo radi
+/* dodavanje klase
     let elPostoji = document.getElementById("div1");//mozda da ovde stavis for, da 
     //ih tako puni, i onda while imsa njih, mapiraj items
     //i onda create img, append, pa vidi jel se pojavljuje
@@ -188,13 +182,6 @@ let el = document.createElement("div"); //mozda treba da ga zalepim na body ili 
     let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
         {name:"c", src:"long-hair.jpg"},{name: "d", src:"long-hair.jpg"}];
     let domElem = items.map(makeElem);
-    //moram ih napunutu prvo da ih vidim na stranici, ili na windows, ili document
-    // pozovem event ?
-
-    //test, mozda je na vrhu strane pa ga ne vidis
-    let divEl = document.createElement("div");
-    const textnode = document.createTextNode("Water");
-    divEl.appendChild(textnode); //zalepi ovo u neki deo bootstrapa ili drugi html el
 
     function makeElem(item){
        let divEl = document.createElement("div");
@@ -211,7 +198,7 @@ let el = document.createElement("div"); //mozda treba da ga zalepim na body ili 
        divEl.id = items.indexOf(item);
        console.log("item index: "+divEl.id);
     }
-    //items.addEventListener("load", domElem); 
+
 window.addEventListener('load', items);
 
 //punjenje carta
