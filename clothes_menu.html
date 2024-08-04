@@ -159,12 +159,20 @@
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
 
+//treba da nsprsvis divove, das im klasu, punis ih podacima, dok ima el. i nizu
 //radi jeeeej!
+    //da ga dodam u proizvode? pa ce izgledati normalno
+    let allProds = document.createElement("div")
+    allProds.classList.add("proizvodi");
 let el = document.createElement("div"); //mozda treba da ga zalepim na body
+    el.classList.add("image");
        let imgEl = document.createElement("img");
        imgEl.src = "long-hair.jpg"; 
+       imgEl.classList.add("prod_image");
        el.appendChild(imgEl); 
-       document.body.appendChild(el);
+       allProds.appendChild(el);
+       document.body.appendChild(allProds);
+
 
 /* dodavanje klase
     let elPostoji = document.getElementById("div1");//mozda da ovde stavis for, da 
