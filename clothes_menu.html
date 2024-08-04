@@ -159,33 +159,6 @@
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
 
-//treba da nsprsvis divove, das im klasu, punis ih podacima, dok ima el. i nizu
-//radi jeeeej!
-    //da ga dodam u proizvode? pa ce izgledati normalno
-    let allProds = document.createElement("div")
-    allProds.classList.add("proizvodi");
-let el = document.createElement("div"); //mozda treba da ga zalepim na body
-    el.classList.add("image");
-       let imgEl = document.createElement("img");
-       imgEl.src = "long-hair.jpg"; 
-       imgEl.classList.add("prod_image");
-       el.appendChild(imgEl); 
-       allProds.appendChild(el);
-       document.body.appendChild(allProds);
-
-
-/* dodavanje klase
-    let elPostoji = document.getElementById("div1");//mozda da ovde stavis for, da 
-    //ih tako puni, i onda while imsa njih, mapiraj items
-    //i onda create img, append, pa vidi jel se pojavljuje
-          let imgEl = document.createElement("img");
-          imgEl.classList.add("prod_image");
-       imgEl.src = "long-hair.jpg";
-       elPostoji.appendChild(imgEl); 
-       */
-
-//mapiraj ovo gore u items, u p ide name, a img slika 
-
     //svi items koji su na prodaju
     let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
         {name:"c", src:"long-hair.jpg"},{name: "d", src:"long-hair.jpg"}];
@@ -208,6 +181,32 @@ let el = document.createElement("div"); //mozda treba da ga zalepim na body
     }
 
 window.addEventListener('load', items);
+
+    let allProds = document.createElement("div")
+    allProds.classList.add("proizvodi");
+//mozda da ovde stavis for, da ih tako puni, i onda while imsa njih, mapiraj items
+//divove punis podacima, dok ima el. i nizu
+    for (var i = 0; i <= items.length - 1; i++) {
+let el = document.createElement("div"); //mozda treba da ga zalepim na body
+    el.classList.add("image");
+       let imgEl = document.createElement("img");
+       imgEl.src = "long-hair.jpg"; 
+       imgEl.classList.add("prod_image");
+       el.appendChild(imgEl); 
+       allProds.appendChild(el);
+   }
+       document.body.appendChild(allProds);
+
+
+/* dodavanje klase
+    let elPostoji = document.getElementById("div1");
+    //i onda create img, append, pa vidi jel se pojavljuje
+          let imgEl = document.createElement("img");
+          imgEl.classList.add("prod_image");
+       imgEl.src = "long-hair.jpg";
+       elPostoji.appendChild(imgEl); 
+       */
+
 
 //punjenje carta
     let cart = [];
