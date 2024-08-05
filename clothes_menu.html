@@ -158,88 +158,41 @@
 
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
-//sad kada postavim podatke iz niza, gledam sta da postavim za cart i to punjenje
+//za cart i kad se klikne i punjenje. treba prvo button add to cart
 
     //svi items koji su na prodaju
     let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
         {name:"c", src:"long-hair.jpg"},{name: "d", src:"long-hair.jpg"}];
-        let allProds = document.createElement("div")
+    let allProds = document.createElement("div")
     allProds.classList.add("proizvodi");
     let domElem = items.map(makeElem);
 
 //punjenje i pravljenje divova
-    function makeElem(item){
+function makeElem(item){
 //treba da dodam id prema indexu u nizu
-//mozda da ovde stavis for, da ih tako puni, i onda while imsa njih, mapiraj items
-//divove punis podacima, dok ima el. i nizu
-    //for (var i = 0; i <= items.length - 1; i++) {
-let el = document.createElement("div"); //mozda treba da ga zalepim na body
+    let el = document.createElement("div"); //mozda treba da ga zalepim na body
     el.classList.add("image");
+    el.id = items.indexOf(item);
+       console.log("div item index je: "+ el.id);
        let imgEl = document.createElement("img");
        imgEl.src = item.src; 
        imgEl.classList.add("prod_image");
        let p = document.createElement("p");
        p.innerHTML = item.name;
+       let button = document.createElement('button');
+    button.innerHTML = "Add to cart";
+    button.onclick = function(){
+    alert('here be dragons');return false;
+  };
         el.classList.add("text_slike");
-       //div class text_ispod
-       //p text_slike
        el.appendChild(imgEl);
         el.appendChild(p);
-       allProds.appendChild(el);
-   //}
- }       document.body.appendChild(allProds);
-
-
-      /* let divEl = document.createElement("div");
-       let imgEl = document.createElement("img");
-       let textEl = document.createElement("p");
-       //i onda ide appendChild vidi tu kako sta, mozda je bolje prvo ih napraviti 
-       // van ove metode, pa onda samo ih nalepis ovako
-       imgEl.src = item.src;
-       divEl.appendChild(imgEl);
-
-       //treba da na div stavis da su razliciti id- jevi
-       //da li da postavim da je id samo broj indexa u nizu?
-       //onda je index of item, ali mora dobija item u ovoj metodi
-       divEl.id = items.indexOf(item);
-       console.log("item index: "+divEl.id);*/
-    
+        el.appendChild(button);
+       allProds.appendChild(el); //treba da ga zalepim na body, inace se ne pojavi
+    }  
+ document.body.appendChild(allProds);
 
 window.addEventListener('load', items);
-
-/* prvo punjenje divova, radi
-//treba da dodam id prema indexu u nizu
-    let allProds = document.createElement("div")
-    allProds.classList.add("proizvodi");
-//mozda da ovde stavis for, da ih tako puni, i onda while imsa njih, mapiraj items
-//divove punis podacima, dok ima el. i nizu
-    for (var i = 0; i <= items.length - 1; i++) {
-let el = document.createElement("div"); //mozda treba da ga zalepim na body
-    el.classList.add("image");
-       let imgEl = document.createElement("img");
-       imgEl.src = item.src; 
-       imgEl.classList.add("prod_image");
-       let p = document.createElement("p");
-       p.innerHTML(item.name);
-        el.classList.add("text_slike");
-       //div class text_ispod
-       //p text_slike
-       el.appendChild(imgEl);
-        el.appendChild(p);
-       allProds.appendChild(el);
-   }
-       document.body.appendChild(allProds);
-                */
-
-/* dodavanje klase
-    let elPostoji = document.getElementById("div1");
-    //i onda create img, append, pa vidi jel se pojavljuje
-          let imgEl = document.createElement("img");
-          imgEl.classList.add("prod_image");
-       imgEl.src = "long-hair.jpg";
-       elPostoji.appendChild(imgEl); 
-       */
-
 
 //punjenje carta
     let cart = [];
@@ -256,7 +209,8 @@ let el = document.createElement("div"); //mozda treba da ga zalepim na body
         let newItem = itmes[argument];
         cart.push(newItem);
     }
-    //delete metoda
+
+//delete metoda
 
 </script>
 
