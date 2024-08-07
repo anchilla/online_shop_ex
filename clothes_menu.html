@@ -173,6 +173,7 @@ function makeElem(item){
     let el = document.createElement("div"); //mozda treba da ga zalepim na body
     el.classList.add("image");
     el.id = items.indexOf(item);
+    let elementId = el.id;
        console.log("div item index je: "+ el.id);
        let imgEl = document.createElement("img");
        imgEl.src = item.src; 
@@ -181,9 +182,16 @@ function makeElem(item){
        p.innerHTML = item.name;
        let button = document.createElement('button');
     button.innerHTML = "Add to cart";
-    button.onclick = function(){
-    alert('here be dragons');return false;
-  };
+    //zasto ne moze da funkcija bude definisana drugde a ovde samo dam ime?
+    //da li moze i bez arg u funkciji i samo s item?
+    button.onclick = function(elementId){        
+        let newItem = item[elementId];
+        cart.push(newItem);
+        //proveri ovaj for, pise da je undefined
+        for(var i=0; i<=cart.length; i++){
+        console.log(cart[i]);
+    }
+    };
         el.classList.add("text_slike");
        el.appendChild(imgEl);
         el.appendChild(p);
@@ -199,18 +207,17 @@ window.addEventListener('load', items);
     //add listener
     //nova stranica koja pokazuje proizvod, tu dodaj add to cart dugme
     //ima add to cart ikonica, na slici stoji, na ovoj strani ok
-    function addToCart(argument) {
+    function addToCart(elementId) {
         //argument ce da bude index
-        /*mozes napraviti neku metodu koja prikazuje stvari, elemente na stranici
-        prema broju indexa u nizu, tj da puni id-jeve addtocart dugmeta na
-        svakom elementu, i tako su drugaciji. onda jedino sve sa js. jquery? hm*/
-        document.getElementById('') // ili event.target.id - moze ako stavim da
-        //su objekat iz niza i njegov id isti
-        let newItem = itmes[argument];
+        let newItem = itmes[elementId];
         cart.push(newItem);
     }
 
 //delete metoda
+    function removeFromCart(arg){
+        cart.splice();//da li on vraca novi array, samo bez tog elementa?
+    }
+    //posle ide da ga prikazem na stranici
 
 </script>
 
