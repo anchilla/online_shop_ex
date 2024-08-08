@@ -160,6 +160,7 @@
 <script >
 //za cart i kad se klikne i punjenje. treba prvo button add to cart
 
+    let cart = [];
     //svi items koji su na prodaju
     let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
         {name:"c", src:"long-hair.jpg"},{name: "d", src:"long-hair.jpg"}];
@@ -182,16 +183,18 @@ function makeElem(item){
        p.innerHTML = item.name;
        let button = document.createElement('button');
     button.innerHTML = "Add to cart";
-    //zasto ne moze da funkcija bude definisana drugde a ovde samo dam ime?
+    //zasto ne moze da funkcija bude definisana drugde a ovde samo dam ime?, probaj
+    // sa event listener
     //da li moze i bez arg u funkciji i samo s item?
-    button.onclick = function(elementId){        
+    button.addEventListener("click",(() => addToCart(elementId)));
+    /*button.onclick = function(elementId){        
         let newItem = item[elementId];
         cart.push(newItem);
         //proveri ovaj for, pise da je undefined
         for(var i=0; i<=cart.length; i++){
         console.log(cart[i]);
     }
-    };
+    };*/
         el.classList.add("text_slike");
        el.appendChild(imgEl);
         el.appendChild(p);
@@ -203,15 +206,19 @@ function makeElem(item){
 window.addEventListener('load', items);
 
 //punjenje carta
-    let cart = [];
     //add listener
     //nova stranica koja pokazuje proizvod, tu dodaj add to cart dugme
     //ima add to cart ikonica, na slici stoji, na ovoj strani ok
+//izgleda da on vec dodaje u cart za svaki element kad ga napravi gore
     function addToCart(elementId) {
         //argument ce da bude index
-        let newItem = itmes[elementId];
+        let newItem = items[elementId];
         cart.push(newItem);
+        //proveri ovaj for, pise da je undefined
+        for(var i=0; i<=cart.length; i++){
+        console.log("kart niz je"+ cart[i]);
     }
+    };
 
 //delete metoda
     function removeFromCart(arg){
