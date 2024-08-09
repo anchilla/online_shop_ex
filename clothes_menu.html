@@ -186,8 +186,8 @@ function makeElem(item){
  /* ovako ne funkcionise jer ovo je poziv metode odmah sa eventlistener:
     button.addEventListener("click",(() => addToCart(elementId)));
     a ovo sto radi je samo prosledjena funkcija
- */
-    button.addEventListener("click",(() => addToCart(elementId)));
+ */ //bilo elementId
+    button.addEventListener("click",(() => addToCart(item)));
     /*button.onclick = function(elementId){        
         let newItem = item[elementId];
         cart.push(newItem);
@@ -206,23 +206,13 @@ function makeElem(item){
 
 window.addEventListener('load', items);
 
+
 //punjenje carta
-    //add listener
-    //nova stranica koja pokazuje proizvod, tu dodaj add to cart dugme
-    //ima add to cart ikonica, na slici stoji, na ovoj strani ok
-//izgleda da on vec dodaje u cart za svaki element kad ga napravi gore
-    function addToCart(elementId) {
-        // da probam da zapisem drugacije,sa spread operatorom?
-        //argument ce da bude index
-        for(var i=0; i<=items.length -1; i++){
-            if(elementId ==i){
-                //ne kopira dobro kad je samo ovo, bez for petlje
-        let newItem = items[elementId];
-        console.log("newItem je:"+ newItem.name);
-        cart.push(newItem);
-    }
-    }
-        //proveri ovaj for, pise da je undefined
+//napraviti opciju ako vec postoji, ne dodajemo taj objekat, poredi properti, 
+//mozda da napravis neki jedinstveni id
+    function addToCart(item) {
+        //vou, funkcionise ovako
+        cart.push(item);
         for(var i=0; i<=cart.length -1; i++){
         console.log("kart niz je: "+[i]+" "+ cart[i].name);
     }
@@ -233,6 +223,17 @@ window.addEventListener('load', items);
         cart.splice();//da li on vraca novi array, samo bez tog elementa?
     }
     //posle ide da ga prikazem na stranici
+
+
+
+    /*ovo bilo za ubacivanje el u cart, preko id-ja koji je index, addToCart metoda:
+    for(var i=0; i<=items.length -1; i++){
+            if(elementId ==i){
+                //ne kopira dobro kad je samo ovo, bez for petlje
+        let newItem = items[elementId];
+        console.log("newItem je:"+ newItem.name);
+     }
+    }*/
 
 </script>
 
