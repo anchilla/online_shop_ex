@@ -183,9 +183,10 @@ function makeElem(item){
        p.innerHTML = item.name;
        let button = document.createElement('button');
     button.innerHTML = "Add to cart";
-    //zasto ne moze da funkcija bude definisana drugde a ovde samo dam ime?, probaj
-    // sa event listener
-    //da li moze i bez arg u funkciji i samo s item?
+ /* ovako ne funkcionise jer ovo je poziv metode odmah sa eventlistener:
+    button.addEventListener("click",(() => addToCart(elementId)));
+    a ovo sto radi je samo prosledjena funkcija
+ */
     button.addEventListener("click",(() => addToCart(elementId)));
     /*button.onclick = function(elementId){        
         let newItem = item[elementId];
@@ -211,12 +212,19 @@ window.addEventListener('load', items);
     //ima add to cart ikonica, na slici stoji, na ovoj strani ok
 //izgleda da on vec dodaje u cart za svaki element kad ga napravi gore
     function addToCart(elementId) {
+        // da probam da zapisem drugacije,sa spread operatorom?
         //argument ce da bude index
+        for(var i=0; i<=items.length -1; i++){
+            if(elementId ==i){
+                //ne kopira dobro kad je samo ovo, bez for petlje
         let newItem = items[elementId];
+        console.log("newItem je:"+ newItem.name);
         cart.push(newItem);
+    }
+    }
         //proveri ovaj for, pise da je undefined
-        for(var i=0; i<=cart.length; i++){
-        console.log("kart niz je"+ cart[i]);
+        for(var i=0; i<=cart.length -1; i++){
+        console.log("kart niz je: "+[i]+" "+ cart[i].name);
     }
     };
 
