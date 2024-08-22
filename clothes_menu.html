@@ -174,7 +174,7 @@ function makeElem(item){
     let el = document.createElement("div"); //mozda treba da ga zalepim na body
     el.classList.add("image");
     el.id = items.indexOf(item);
-    let elementId = el.id;
+    //let elementId = el.id;
        console.log("div item index je: "+ el.id);
        let imgEl = document.createElement("img");
        imgEl.src = item.src; 
@@ -206,7 +206,6 @@ function makeElem(item){
 
 window.addEventListener('load', items);
 
-
 //punjenje carta
 //napraviti opciju ako vec postoji, ne dodajemo taj objekat, poredi properti, 
 //mozda da napravis neki jedinstveni id
@@ -218,9 +217,9 @@ window.addEventListener('load', items);
     }
     };
 
-//delete metoda
+//delete metoda, napravi i button za to, ali na cart stranici
     function removeFromCart(arg){
-        cart.splice();//da li on vraca novi array, samo bez tog elementa?
+        cart.splice(cart[arg], 1);//da li on vraca novi array, samo bez tog elementa?
     }
     //posle ide da ga prikazem na stranici
 
