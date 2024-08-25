@@ -117,7 +117,7 @@
 
 <!--ovde stavis link koji vodu na prikaz cart stranice -->
 <div>
-    <a href="">View cart</a>
+    <a href="shopping-cart/shopping_cart.html">View cart</a>
 </div>
 
 
@@ -239,6 +239,10 @@ window.addEventListener('load', items);
         console.log("newItem je:"+ newItem.name);
      }
     }*/
+
+//saving object for cart page
+  const myObjectString = JSON.stringify(cart);
+  localStorage.setItem('objectGreeting', myObjectString);
 
 </script>
 
