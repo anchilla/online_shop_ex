@@ -215,12 +215,16 @@ window.addEventListener('load', items);
 //punjenje carta
 //napraviti opciju ako vec postoji, ne dodajemo taj objekat, poredi properti, 
 //mozda da napravis neki jedinstveni id
+let myObjectString = []; //objekat cart koji se salje drugoj stranici
     function addToCart(item) {
         //vou, funkcionise ovako
         cart.push(item);
         for(var i=0; i<=cart.length -1; i++){
         console.log("kart niz je: "+[i]+" "+ cart[i].name);
     }
+    //saving object for cart page
+  myObjectString = JSON.stringify(cart);
+  localStorage.setItem('objectGreeting', myObjectString);
     };
 
 //delete metoda, napravi i button za to, ali na cart stranici
@@ -240,9 +244,7 @@ window.addEventListener('load', items);
      }
     }*/
 
-//saving object for cart page
-  const myObjectString = JSON.stringify(cart);
-  localStorage.setItem('objectGreeting', myObjectString);
+
 
 </script>
 
