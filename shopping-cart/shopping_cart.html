@@ -145,16 +145,25 @@
 	let cartElem = cart.map(makeCardItem);
 
 	function makeCardItem(cartItem){
-		let el = document.createElement("div"); //mozda treba da ga zalepim na body
-    //el.classList.add("image");
+		let el = document.createElement("div");
+    	el.classList.add("product-name");
 		let p = document.createElement("p"); 
-		p.innerHTML = "cart elem";
+		p.innerHTML = cartItem.name;
+		let buttonRemove = document.createElement("button"); 
+		buttonRemove.innerHTML = "Remove";
+		buttonRemove.addEventListener("click",(() => removeFromCart(cartItem)));
+		//dodaj remove metodu
 		el.appendChild(p);
+		el.appendChild(buttonRemove);
 		 document.body.appendChild(el);
 	}
 	//treba da create ovde stvari koje stoje u cart, prema ovome, nemoj sve da brises
 	//i onda stavi delete metodu na dugme, kao i za dodavanje
 
+//prvi arg je index tog elementa u nizu, kako da to uradim?
+    function removeFromCart(item){
+        cart.splice(cart[item], 1);//da li on vraca novi array, samo bez tog elementa?
+    }
 </script>
 </body>
 </html>
