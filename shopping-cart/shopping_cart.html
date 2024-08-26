@@ -150,9 +150,10 @@
 		let p = document.createElement("p"); 
 		p.innerHTML = cartItem.name;
 		let buttonRemove = document.createElement("button"); 
+		//nesto ovako, da bih imala index, i onda ga prosledim u ovoj metodi
+		var index = cart.indexOf(cartItem);
 		buttonRemove.innerHTML = "Remove";
-		buttonRemove.addEventListener("click",(() => removeFromCart(cartItem)));
-		//dodaj remove metodu
+		buttonRemove.addEventListener("click",(() => removeFromCart(index)));
 		el.appendChild(p);
 		el.appendChild(buttonRemove);
 		 document.body.appendChild(el);
@@ -161,8 +162,8 @@
 	//i onda stavi delete metodu na dugme, kao i za dodavanje
 
 //prvi arg je index tog elementa u nizu, kako da to uradim?
-    function removeFromCart(item){
-        cart.splice(cart[item], 1);//da li on vraca novi array, samo bez tog elementa?
+    function removeFromCart(index){
+        cart.splice(index, 1);//da li on vraca novi array, samo bez tog elementa?
     }
 </script>
 </body>
