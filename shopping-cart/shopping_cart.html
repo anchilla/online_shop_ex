@@ -152,6 +152,7 @@
 		let buttonRemove = document.createElement("button"); 
 		//nesto ovako, da bih imala index, i onda ga prosledim u ovoj metodi
 		var index = cart.indexOf(cartItem);
+		console.log("index je: "+index);
 		buttonRemove.innerHTML = "Remove";
 		buttonRemove.addEventListener("click",(() => removeFromCart(index)));
 		el.appendChild(p);
@@ -161,9 +162,13 @@
 	//treba da create ovde stvari koje stoje u cart, prema ovome, nemoj sve da brises
 	//i onda stavi delete metodu na dugme, kao i za dodavanje
 
-//prvi arg je index tog elementa u nizu, kako da to uradim?
+	//kako da stavim da odmah ukloni na stranici, da ne prikazuje, jer sada ukloni,
+	//ali i dalje prikazuje iste elemente. Mozda da stavim gore da konstantno 
+	//mapira prema promenjenom nizu
     function removeFromCart(index){
+    			console.log("remove index je: "+index);
         cart.splice(index, 1);//da li on vraca novi array, samo bez tog elementa?
+        //ili ovde dodam ponovno prikazivanje niza???
     }
 </script>
 </body>
