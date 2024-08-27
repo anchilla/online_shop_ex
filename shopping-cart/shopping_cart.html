@@ -152,6 +152,7 @@
 		let buttonRemove = document.createElement("button"); 
 		//nesto ovako, da bih imala index, i onda ga prosledim u ovoj metodi
 		var index = cart.indexOf(cartItem);
+		el.id = index;
 		console.log("index je: "+index);
 		buttonRemove.innerHTML = "Remove";
 		buttonRemove.addEventListener("click",(() => removeFromCart(index)));
@@ -167,8 +168,12 @@
 	//mapira prema promenjenom nizu
     function removeFromCart(index){
     			console.log("remove index je: "+index);
+    			const myDiv = document.getElementById(index);
         cart.splice(index, 1);//da li on vraca novi array, samo bez tog elementa?
         //ili ovde dodam ponovno prikazivanje niza???
+        //let cartElem = cart.map(makeCardItem);
+        myDiv.remove();
+
     }
 </script>
 </body>
