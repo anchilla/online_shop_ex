@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="shopping_cart.css">
 </head>
 <body>
 	<main class="page">
@@ -132,13 +133,13 @@
 	 		</div>
 		</section>
 	</main>
+<div id="cart_elements" class="cart"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	
-//	let cart =[1,2,3];
-	//taking object from other page
+		var divContent = document.getElementById("cart_elements");
   const myObjectString2 = localStorage.getItem('objectGreeting');
   const cart = JSON.parse(myObjectString2);
   console.log("Cart je: " + cart);
@@ -146,9 +147,12 @@
 
 	function makeCardItem(cartItem){
 		let el = document.createElement("div");
-    	el.classList.add("product-name");
+    	el.classList.add("shopping-cart");
 		let p = document.createElement("p"); 
 		p.innerHTML = cartItem.name;
+		let img = document.createElement("img");
+		img.classList.add("img_item");
+		img.src = cartItem.src; //u drugom je folderu odavde, pa ne nalazi
 		let buttonRemove = document.createElement("button"); 
 		//nesto ovako, da bih imala index, i onda ga prosledim u ovoj metodi
 		var index = cart.indexOf(cartItem);
@@ -156,9 +160,11 @@
 		console.log("index je: "+index);
 		buttonRemove.innerHTML = "Remove";
 		buttonRemove.addEventListener("click",(() => removeFromCart(index)));
+		buttonRemove.classList.add("button_remove");
 		el.appendChild(p);
+		el.appendChild(img);
 		el.appendChild(buttonRemove);
-		 document.body.appendChild(el);
+		 divContent.appendChild(el);
 	}
 	//treba da create ovde stvari koje stoje u cart, prema ovome, nemoj sve da brises
 	//i onda stavi delete metodu na dugme, kao i za dodavanje
@@ -172,7 +178,8 @@
         cart.splice(index, 1);//da li on vraca novi array, samo bez tog elementa?
         //ili ovde dodam ponovno prikazivanje niza???
         //let cartElem = cart.map(makeCardItem);
-        myDiv.remove();
+        myDiv.remove(); //ovo mora inace ce i dalje da bleji na stranici stvoreni 
+        				//div, samo smo ga izbrisali iz niza onako.
 
     }
 </script>
