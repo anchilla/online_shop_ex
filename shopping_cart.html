@@ -145,6 +145,7 @@
   console.log("Cart je: " + cart);
 	let cartElem = cart.map(makeCardItem);
 
+//dodaj samo brojac, i mesto za summary, da se raspodeli
 	function makeCardItem(cartItem){
 		let el = document.createElement("div");
     	el.classList.add("shopping-cart");
@@ -161,9 +162,13 @@
 		buttonRemove.innerHTML = "Remove";
 		buttonRemove.addEventListener("click",(() => removeFromCart(index)));
 		buttonRemove.classList.add("button_remove");
+		let quantity = document.createElement("input");
+		quantity.type = "number";
+		quantity.setAttribute("style","width:50px");
 		el.appendChild(p);
 		el.appendChild(img);
 		el.appendChild(buttonRemove);
+		el.appendChild(quantity);
 		 divContent.appendChild(el);
 	}
 	//treba da create ovde stvari koje stoje u cart, prema ovome, nemoj sve da brises
