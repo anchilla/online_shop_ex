@@ -119,7 +119,7 @@
 				 			</div>
 			 			</div>
 			 			<div class="col-md-12 col-lg-4">
-			 				<div class="summary">
+			 				<div id ="total" class="summary">
 			 					<h3>Summary</h3>
 			 					<div class="summary-item"><span class="text">Subtotal</span><span class="price">$360</span></div>
 			 					<div class="summary-item"><span class="text">Discount</span><span class="price">$0</span></div>
@@ -140,14 +140,19 @@
 <script type="text/javascript">
 	
 		var divContent = document.getElementById("cart_elements");
+		var summary = document.getElementById("total");
+		summary.setAttribute("style","display:inline");
+		summary.setAttribute("style","width:30%");
   const myObjectString2 = localStorage.getItem('objectGreeting');
   const cart = JSON.parse(myObjectString2);
   console.log("Cart je: " + cart);
 	let cartElem = cart.map(makeCardItem);
 
-//dodaj samo brojac, i mesto za summary, da se raspodeli
+//dodaj mesto za summary, da se raspodeli
 	function makeCardItem(cartItem){
 		let el = document.createElement("div");
+		el.setAttribute("style","display:inline");
+		el.setAttribute("style","width:65%");
     	el.classList.add("shopping-cart");
 		let p = document.createElement("p"); 
 		p.innerHTML = cartItem.name;
@@ -171,6 +176,7 @@
 		el.appendChild(quantity);
 		 divContent.appendChild(el);
 	}
+	divContent.appendChild(summary);
 	//treba da create ovde stvari koje stoje u cart, prema ovome, nemoj sve da brises
 	//i onda stavi delete metodu na dugme, kao i za dodavanje
 
