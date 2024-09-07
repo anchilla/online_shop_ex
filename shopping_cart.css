@@ -7,3 +7,10 @@
 .button_remove{
 	margin: 30px;
 }
+.summ{
+	display:inline;
+	width:30%;
+	float: right;
+	padding: 0 40px 40px 40px;
+	margin-right: 70px;
+	}
