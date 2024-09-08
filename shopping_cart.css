@@ -7,6 +7,10 @@
 .button_remove{
 	margin: 30px;
 }
+.cart_items{
+	margin-left: 70px;
+	padding-top: 15px;
+}
 .summ{
 	display:inline;
 	width:30%;

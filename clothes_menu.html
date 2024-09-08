@@ -180,11 +180,13 @@ function makeElem(item){
     let el = document.createElement("div"); //mozda treba da ga zalepim na body
     el.classList.add("image");
     el.id = items.indexOf(item);
-    //let elementId = el.id;
        console.log("div item index je: "+ el.id);
+       //img treba da moze da se klikne i salje na shop item, daje te podatke
+       //kao za button onclick mhm
        let imgEl = document.createElement("img");
        imgEl.src = item.src; 
        imgEl.classList.add("prod_image");
+       imgEl.addEventListener("click",(() => showItem(item)));
        let p = document.createElement("p");
        p.innerHTML = item.name;
        let button = document.createElement('button');
@@ -233,7 +235,10 @@ let myObjectString = []; //objekat cart koji se salje drugoj stranici
     }
     //posle ide da ga prikazem na stranici
 
-
+    function showItem(item){
+        window.open('startbootstrap-shop-item-gh-pages/shop_item.html');
+        //link na nocu stranicu i prenesi joj podatke
+    }
 
     /*ovo bilo za ubacivanje el u cart, preko id-ja koji je index, addToCart metoda:
     for(var i=0; i<=items.length -1; i++){

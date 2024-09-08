@@ -161,12 +161,15 @@
   console.log("Cart je: " + cart);
 	let cartElem = cart.map(makeCardItem);
 
-//dodaj mesto za summary, da se raspodeli
+	//kako napraviti da se kupi, dodati stranicu za to?
+	//dodati jos itema?
+	// neka baza? sta tu
+	//str. za proizvod
 	function makeCardItem(cartItem){
 		let el = document.createElement("div");
 		el.setAttribute("style","display:inline");
 		el.setAttribute("style","width:65%");
-    	el.classList.add("shopping-cart");
+    	el.classList.add("cart_items");
 		let p = document.createElement("p"); 
 		p.innerHTML = cartItem.name;
 		let img = document.createElement("img");
