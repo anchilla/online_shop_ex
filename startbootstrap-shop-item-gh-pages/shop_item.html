@@ -204,9 +204,15 @@
                 // img id="prod_img", h1 id="prod_name"
                 img = document.getElementById("prod_img");
                 name = document.getElementById("prod_name").innerHTML = item.name;
-               // img.src = item.src; nije dobar pathway pa ne nalazi
+                img.src = "../"+item.src; 
                 
              }
+             //pogledaj sta koristis, organizacija foldera bolje
+             //da li i za drugu stranicu da uradim za img ovako, i vratim je u
+             // originalni folder? - pre je index taj u -business frontpage, a
+             // ne clothes menu
+             // index ne mora da mi bude na istom nivou jer ni ne koristi slike
+             //odece kao ostale stranice, jep
         </script>
 
 

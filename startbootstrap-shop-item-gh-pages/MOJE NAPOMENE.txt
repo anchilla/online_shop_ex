@@ -1,0 +1,3 @@
+cart ovo ne koristim, to je html
+database je moj pokusaj povezivanja s mongodb
+jScript uz database neki pokusaj
