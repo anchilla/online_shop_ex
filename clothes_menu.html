@@ -237,8 +237,7 @@ let myObjectString = []; //objekat cart koji se salje drugoj stranici
 
     let one_item = ""; //ne sme da bude null, inace je uvek null
     function showItem(item){
-        //sto otvara u novom tabu?
-        window.location.href=('startbootstrap-shop-item-gh-pages/shop_item.html');
+    window.location.href=('startbootstrap-shop-item-gh-pages/shop_item.html');
         //prenesi joj podatke
         one_item = JSON.stringify(item);
         localStorage.setItem('item', one_item);
