@@ -190,6 +190,7 @@ function makeElem(item){
        let p = document.createElement("p");
        p.innerHTML = item.name;
        let button = document.createElement('button');
+       button.classList.add("button");
     button.innerHTML = "Add to cart";
  /* ovako ne funkcionise jer ovo je poziv metode odmah sa eventlistener:
     button.addEventListener("click",(() => addToCart(elementId)));
