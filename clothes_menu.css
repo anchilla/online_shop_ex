@@ -64,6 +64,7 @@
 .image img {
   object-fit: contain;
   background-color: #9D8AC7;
+    border-radius: 25px;
 }
 
 .prod_image {
