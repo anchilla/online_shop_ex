@@ -164,6 +164,8 @@
 
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
+//hajde da malo sredim izgled, i dodajem polako ovaj proj na profil,i njega sredi
+
 //za cart i kad se klikne i punjenje. treba prvo button add to cart
 
     let cart = [];
@@ -184,8 +186,6 @@ function makeElem(item){
        //img treba da moze da se klikne i salje na shop item, daje te podatke
        //kao za button onclick mhm
        let imgEl = document.createElement("img");
-       //mozda img prelazi border zato sto je napravim s js, posle. ds uadim to 
-       //to nekako zajedno?
        imgEl.src = item.src; 
        imgEl.classList.add("prod_image");
        imgEl.addEventListener("click",(() => showItem(item)));
