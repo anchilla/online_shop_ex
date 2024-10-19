@@ -192,6 +192,7 @@ function makeElem(item){
        imgEl.addEventListener("click",(() => showItem(item)));
        let p = document.createElement("p");
        p.innerHTML = item.name;
+       p.classList.add("text_ime_proiz");
        // dodaj mu neku klasu?, sredi ga
        let button = document.createElement('button');
        button.classList.add("button");

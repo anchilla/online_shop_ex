@@ -60,6 +60,10 @@
   margin: 0;
   padding: 10px 0;
 }
+.text_ime_proiz{
+    padding: 10px 0;
+    margin: 0;
+}
 
 .image img {
   object-fit: contain;
@@ -113,6 +117,7 @@
   border-radius: 8px;
   border-width: 1.5 px;
   border-color: #9a9b9c;
+  margin-bottom: 3px;
 }
 /*
 .round {
