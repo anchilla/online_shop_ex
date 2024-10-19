@@ -165,13 +165,14 @@
 <!-- u script tagu src="nakitMenu.js" -->
 <script >
 //hajde da malo sredim izgled, i dodajem polako ovaj proj na profil,i njega sredi
+    //kako staviti ovaj div iz js pre footera? gde?
 
 //za cart i kad se klikne i punjenje. treba prvo button add to cart
 
     let cart = [];
     //svi items koji su na prodaju
-    let items = [{name:"a", src:"long-hair.jpg"}, {name:"b", src:"long-hair.jpg"}, 
-        {name:"c", src:"long-hair.jpg"},{name: "d", src:"long-hair.jpg"}];
+    let items = [{name:"Pants", src:"long-hair.jpg"}, {name:"Shirt", src:"long-hair.jpg"}, 
+        {name:"Skirt", src:"long-hair.jpg"},{name: "Socks", src:"long-hair.jpg"}];
     let allProds = document.createElement("div")
     allProds.classList.add("proizvodi");
     let domElem = items.map(makeElem);
@@ -191,6 +192,7 @@ function makeElem(item){
        imgEl.addEventListener("click",(() => showItem(item)));
        let p = document.createElement("p");
        p.innerHTML = item.name;
+       // dodaj mu neku klasu?, sredi ga
        let button = document.createElement('button');
        button.classList.add("button");
     button.innerHTML = "Add to cart";
